@@ -1,129 +1,128 @@
 @import './_variables.scss';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lexend Deca';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca';
 }
 
-html, body {
-    height: 100%;
-    font-size: 15px;
-}
-
+html,
 body {
-    background: $light-gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  font-size: 15px;
+}
+main {
+  height: 100%;
+  background: $light-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards {
-    display: flex;
-    width: 850px;
-    height: 500px;
+  display: flex;
+  width: 850px;
+  height: 500px;
 
-    @media (max-width: 1200px) {
-        flex-direction: column;
-        width: 320px;
-        height: 600px;
-    }
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    width: 320px;
+    height: 600px;
+  }
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    flex: 0 1 33.3%;
-    height: 100%;
-    padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 33.3%;
+  height: 100%;
+  padding: 3rem;
 
-    &:first-child {
-        background: $orange;
-        .card__btn {
-            color: $orange;
-            &:hover {
-                color: $light-gray;
-            }
-        }
+  &:first-child {
+    background: $orange;
+    .card__btn {
+      color: $orange;
+      &:hover {
+        color: $light-gray;
+      }
     }
-    &:nth-child(2) {
-        background: $cyan;
-        .card__btn {
-            color: $cyan;
-            &:hover {
-                color: $light-gray;
-            }
-        }
+  }
+  &:nth-child(2) {
+    background: $cyan;
+    .card__btn {
+      color: $cyan;
+      &:hover {
+        color: $light-gray;
+      }
     }
-    &:last-child {
-        background: $dark-cyan;
-        .card__btn {
-            color: $dark-cyan;
-            &:hover {
-                color: $light-gray;
-            }
-        }
+  }
+  &:last-child {
+    background: $dark-cyan;
+    .card__btn {
+      color: $dark-cyan;
+      &:hover {
+        color: $light-gray;
+      }
     }
+  }
+
+  &__icon {
+    width: 60px;
+  }
+
+  &__title {
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    color: $light-gray;
+    padding: 2rem 0;
+    font-size: 2.2rem;
+  }
+
+  &__description {
+    color: $white-transparent;
+    line-height: 1.7rem;
+    font-size: 0.85rem;
+  }
+
+  &__btn {
+    margin-top: auto;
+    background: $light-gray;
+    border: none;
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    width: 80%;
+
+    &:hover {
+      cursor: pointer;
+      background: inherit;
+      border: 2px solid $light-gray;
+      color: $light-gray;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    height: 33.3%;
+    padding: 1.5rem 2rem;
 
     &__icon {
-        width: 60px;
+      width: 30px;
     }
 
     &__title {
-        font-family: 'Big Shoulders Display';
-        text-transform: uppercase;
-        color: $light-gray;
-        padding: 2rem 0;
-        font-size: 2.2rem;
+      padding: 0.5rem 0;
+      font-size: 1.4rem;
     }
 
     &__description {
-        color: $white-transparent;
-        line-height: 1.7rem;
-        font-size: 0.85rem;
+      line-height: 1.2rem;
+      font-size: 0.6rem;
     }
 
     &__btn {
-        margin-top: auto;
-        background: $light-gray;
-        border: none;
-        border-radius: 30px;
-        padding: 1rem 1.5rem;
-        width: 80%;
-
-        &:hover {
-            cursor: pointer;
-            background: inherit;
-            border: 2px solid $light-gray;
-            color: $light-gray;
-        }
+      font-size: 0.6rem;
+      padding: 0.5rem;
+      width: 33%;
     }
-
-    
-    @media (max-width: 1200px) {
-        height: 33.3%;
-        padding: 1.5rem 2rem;
-
-        &__icon {
-            width: 30px;
-        }
-    
-        &__title {
-            padding: .5rem 0;
-            font-size: 1.4rem;
-        }
-    
-        &__description {
-            line-height: 1.2rem;
-            font-size: 0.6rem;
-        }
-    
-        &__btn {
-            font-size: .6rem;
-            padding: .5rem;
-            width: 33%;
-
-        }
-    }
+  }
 }
